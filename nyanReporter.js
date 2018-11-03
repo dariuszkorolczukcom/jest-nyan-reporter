@@ -100,6 +100,11 @@ class NyanReporter {
       numPendingTests,
       numTotalTests,
     }) {
+    //if the values are empty, set them to 0
+      if(!numPassedTests) {numPassedTests=0};
+      if(!numFailedTests) {numFailedTests=0};
+      if(!numPendingTests) {numPendingTests=0};
+      if(!numTotalTests) {numTotalTests=0};
     this.drawType('total tests', numTotalTests);
     this.drawType('green', numPassedTests);
     this.drawType('fail', numFailedTests);
